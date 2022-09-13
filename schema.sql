@@ -18,3 +18,6 @@ ALTER TABLE animals ADD COLUMN species VARCHAR(255);
 /* Inside a transaction update the animals table by setting the species column to unspecified. Verify that change was made. Then roll back the change and verify that the species columns went back to the state before the transaction.*/
 BEGIN;
 UPDATE animals SET species = 'unspecified' WHERE species IS NULL;
+UPDATE animals SET species = Null WHERE species = 'unspecified';
+UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
+UPDATE animals SET species = 'pokemon' WHERE species IS Null;
