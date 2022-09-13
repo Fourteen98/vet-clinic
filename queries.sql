@@ -1,7 +1,7 @@
 /*Queries that provide answers to the questions from all projects.*/
 
 SELECT * FROM animals WHERE name LIKE '%mon';
-
+ an
 SELECT * FROM animals WHERE date_of_birth BETWEEN '2016-01-01' AND '2019-12-31';
 
 SELECT * FROM animals WHERE neutered = true;
@@ -12,7 +12,7 @@ SELECT name, escape_attempts FROM animals WHERE weight_kg > 10.5;
 
 SELECT * FROM animals WHERE neutered = true;
 
-SELECT * FROM ANIMALS WHERE name NOT LIKE '%Gabumon%';
+SELECT * FROM animals WHERE name NOT LIKE '%Gabumon%';
 
 SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
 

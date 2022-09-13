@@ -1,4 +1,4 @@
-# vet-clinic database
+# vet_clinic database
 
 > This is a database for a vet clinic.
 
