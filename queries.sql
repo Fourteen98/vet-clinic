@@ -16,15 +16,27 @@ SELECT * FROM animals WHERE name NOT LIKE '%Gabumon%';
 
 SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
 
+BEGIN;
+
 UPDATE animals SET species = 'unspecified' WHERE species IS NULL;
 
 ROLLBACK;
+
+SELECT species FROM animals;
 
 UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
 
 UPDATE animals SET species = 'pokemon' WHERE species IS NULL;
 
 COMMIT;
+
+DELETE FROM animals;
+
+ROLLBACK;
+
+SELECT species FROM animals;
+
+BEGIN;
 
 DELETE FROM animals WHERE date_of_birth > '2022-01-01';
 
@@ -35,6 +47,8 @@ UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg > 0 OR weight_kg  
 ROLLBACK TO animals;
 
 UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
+
+COMMIT;
 
 /* How many animals are there? */
 SELECT COUNT(*) FROM animals ;
