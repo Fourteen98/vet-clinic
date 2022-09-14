@@ -31,3 +31,28 @@ UPDATE animals set species_id = 2 WHERE name NOT LIKE '%mon';
 
 COMMIT ;
 
+BEGIN;
+
+UPDATE animals set owner_id = 1 where name = 'Agumon';
+
+UPDATE animals set owner_id = 2 where name = 'Gabumon';
+
+UPDATE animals set owner_id = 2 where name = 'Pikachu';
+
+UPDATE animals set owner_id = 3 where name = 'Devimon';
+
+UPDATE animals set owner_id = 3 where name = 'Plantmon';
+
+UPDATE animals set owner_id = 4 where name = 'Charmander';
+
+UPDATE animals set owner_id = 4 where name = 'Squirtle';
+
+UPDATE animals set owner_id = 4 where name = 'Blossom';
+
+UPDATE animals set owner_id = 5 where name = 'Angemon';
+
+UPDATE animals set owner_id = 5 where name = 'Boarmon';
+
+COMMIT;
+
+
