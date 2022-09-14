@@ -89,3 +89,4 @@ SELECT animals.name FROM animals JOIN owners ON animals.owner_id = owners.id WHE
 
 /* Who owns the most animals? */
 SELECT owners.full_name FROM owners JOIN animals ON owners.id = animals.owner_id GROUP BY owners.full_name ORDER BY COUNT(*) DESC LIMIT 1;
+
