@@ -14,3 +14,16 @@ CREATE TABLE animals (
 );
 
 ALTER TABLE animals ADD COLUMN species VARCHAR(255);
+
+
+CREATE TABLE owners (
+    id BIGSERIAL NOT NULL PRIMARY KEY,
+    full_name VARCHAR(255) NOT NULL,
+    age INT NOT NULL
+);
+
+CREATE TABLE species (
+    id BIGSERIAL NOT NULL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
+);
+
