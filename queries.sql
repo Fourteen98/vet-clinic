@@ -90,3 +90,6 @@ SELECT animals.name FROM animals JOIN owners ON animals.owner_id = owners.id WHE
 /* Who owns the most animals? */
 SELECT owners.full_name FROM owners JOIN animals ON owners.id = animals.owner_id GROUP BY owners.full_name ORDER BY COUNT(*) DESC LIMIT 1;
 
+/* Who was the last animal seen by William Tatcher? */
+
+SELECT animals.name FROM animals JOIN owners ON animals.owner_id = owners.id WHERE owners.full_name = 'William Tatcher' ORDER BY animals.date_of_birth DESC LIMIT 1;
