@@ -238,3 +238,5 @@ INSERT INTO visits (animal_id, vet_id, date_of_visit)
         (SELECT id FROM vets WHERE name = 'William Tatcher'),
         '2020-01-11'
     );
+
+COMMIT;
