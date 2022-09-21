@@ -32,9 +32,18 @@ CREATE TABLE treatments (
     name VARCHAR(100) NOT NULL
 );
 
-/* create table treatment_medical_history (m:n relation) */
-CREATE TABLE treatments_medical_histories (
-    treatment_id INT NOT NULL REFERENCES treatments(id),
-    medical_history_id INT NOT NULL REFERENCES medical_histories(id)
+/* create table treatments_medical_history (m:n relation) */
+CREATE TABLE treatments_medical_history (
+    treatments_id INT NOT NULL REFERENCES treatments(id),
+    medical_histories_id INT NOT NULL REFERENCES medical_histories(id)
 );
 
+/* create table invoice_items */
+CREATE TABLE invoice_items (
+    id BIGSERIAL NOT NULL PRIMARY KEY,
+    unit_price DECIMAL(10,2) NOT NULL,
+    quantity INT NOT NULL,
+    total_price DECIMAL(10,2) NOT NULL,
+    invoice_id INT NOT NULL REFERENCES invoices(id),
+    treatments_id INT REFERENCES treatments(id)
+);
