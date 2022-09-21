@@ -32,8 +32,8 @@ CREATE TABLE treatments (
     name VARCHAR(100) NOT NULL
 );
 
-/* create table trearments_medicalhestories(m:n relation) */
-CREATE TABLE trearments_medicalhestories (
+/* create table treatment_medical_history (m:n relation) */
+CREATE TABLE treatments_medical_histories (
     treatment_id INT NOT NULL REFERENCES treatments(id),
     medical_history_id INT NOT NULL REFERENCES medical_histories(id)
 );
