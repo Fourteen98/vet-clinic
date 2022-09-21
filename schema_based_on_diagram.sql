@@ -24,3 +24,10 @@ CREATE TABLE invoices (
     generated_at TIMESTAMP NOT NULL,
     payed_at TIMESTAMP NOT NULL
 );
+
+/* create table treatments */
+CREATE TABLE treatments (
+    id BIGSERIAL NOT NULL PRIMARY KEY,
+    type VARCHAR(50) NOT NULL,
+    name VARCHAR(100) NOT NULL
+);
