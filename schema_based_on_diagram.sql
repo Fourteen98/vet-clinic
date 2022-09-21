@@ -31,3 +31,10 @@ CREATE TABLE treatments (
     type VARCHAR(50) NOT NULL,
     name VARCHAR(100) NOT NULL
 );
+
+/* create table trearments_medicalhestories(m:n relation) */
+CREATE TABLE trearments_medicalhestories (
+    treatment_id INT NOT NULL REFERENCES treatments(id),
+    medical_history_id INT NOT NULL REFERENCES medical_histories(id)
+);
+
